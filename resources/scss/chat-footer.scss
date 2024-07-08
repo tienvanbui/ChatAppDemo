@@ -1,0 +1,36 @@
+.chat-footer {
+    .input-box {
+        .input-text-wrapper {
+            position: relative;
+            width: 100%;
+            .input-text {
+                .el-textarea__inner {
+                    min-height: 50px !important;
+                    height: 50px !important;
+                    border-radius: 100px;
+                    padding-top: 15px;
+                    padding-left: 20px;
+
+                    padding-right: 40px;
+                    overflow-y: auto;
+
+                    &::-webkit-scrollbar {
+                        width: 0 !important;
+                        height: 0 !important;
+                    }
+                }
+            }
+
+            .btn-send {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
+                cursor: pointer;
+
+                font-size: 24px;
+                color: #ffa41c;
+            }
+        }
+    }
+}

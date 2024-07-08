@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Web\ChatController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -21,4 +22,6 @@ Route::middleware([
     Route::get('/users', function () {
         return Inertia::render('Users');
     })->name('users');
+
+    Route::get('/chats/{id?}', [ChatController::class, 'chatDetail'])->name('chats.index');
 });

@@ -1,0 +1,66 @@
+.chat-sidebar {
+  width: 100%;
+  overflow: hidden;
+  background: white;
+
+  .list-chat-box {
+    height: 100%;
+    max-height: 100%;
+
+    .list-item {
+      max-height: calc(100% - 40px);
+      padding: 0 8px;
+      overflow-y: auto;
+
+      &:hover {
+        overflow-y: auto;
+      }
+    }
+
+    .conversation-item {
+      cursor: pointer;
+      padding: 8px;
+      margin-bottom: 12px;
+      background: #f5f5f5;
+
+      .avatar {
+        width: 64px;
+        height: 64px;
+      }
+
+      &.is-active,
+      &:hover {
+        border-radius: 8px;
+        background: var(--Brand-1, #0082be);
+        color: white;
+      }
+
+      .el-link {
+        color: black;
+      }
+
+      &.is-active .el-link,
+      &:hover .el-link {
+        color: white;
+      }
+
+      .el-link__inner {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      @media all and (max-width: 376px) {
+        .avatar {
+          width: 54px;
+          height: 54px;
+        }
+      }
+    }
+  }
+}
+
+.conversation-item {
+  .el-loading-mask {
+    background: transparent;
+  }
+}

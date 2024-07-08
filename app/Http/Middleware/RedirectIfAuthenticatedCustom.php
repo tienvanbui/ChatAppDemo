@@ -27,11 +27,8 @@ class RedirectIfAuthenticatedCustom
         $guards = empty($guards) ? [null] : $guards;
         foreach ($guards as $guard) {
             if (Auth::guard($guard)->check()) {
-                if ($guard === 'admin') {
-                    static::$redirectToCallback = '/admin';
-                }
                 if ($guard === 'web') {
-                    static::$redirectToCallback = '/my-page';
+                    static::$redirectToCallback = '/users';
                 }
                 return redirect(static::$redirectToCallback);
             }
